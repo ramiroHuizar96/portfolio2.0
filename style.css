@@ -1,12 +1,24 @@
+:root{
+    --main-white: #f4f7f2; /* baby powder white */
+    --main-black: #131910; /*Dark jungle green*/
+    --main-color: #87a776; /*Asparagus*/
+    --secondary-color: #698958; /*Russian Green */
+    --thrid-color: #4c6440; /* hunter green*/
+    --accent-color: #eeb902; /*Orange Yellow*/ 
+    --animation-font: 'Rye', cursive;
+    --bodytext-font: 'Darker Grotesque', sans-serif;
+    --title-font:  'Playfair Display SC', serif;
+}
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-.landing{
+.landing, #about{
     min-height: 100vh;
-    background-color: #0ea592;
-    padding-inline: 2rem;
+    background-color: var(--main-white);
+    padding-inline: 1rem;
 }
 /*landing is the home page */
 nav{
@@ -23,6 +35,9 @@ nav{
 .navlinks li{
     padding-inline-start: 1rem;
     font-size: 1rem;
+    color: var(--secondary-color);
+    font-family: var(--bodytext-font);
+    font-weight: bold;
 }
 /*nav is to set the location and height
 .navlinks is to edit the text
@@ -36,13 +51,15 @@ li is where youll set the postioning of the links*/
     top: 40%;
     left: 50%;
     transform: translate(-50%, -40%);
-    font-size: 2.5rem;
-    color: white;
+    font-size: 3rem;
+    color: var(--main-black);
+    font-family: var(--animation-font);
+    font-weight: lighter;
 }
 /* greeting animated text ends*/
 /*Welcome home screen message starts*/
 .intro{
-    background-color: black;
+    background-color:var(--main-color);
     position: fixed;
     top: 0;
     left: 0;
@@ -55,7 +72,7 @@ li is where youll set the postioning of the links*/
 /*Welcome home screen message Ends*/
 /*animation starts*/
 .slider{
-    background-color:grey;
+    background-color:var(--main-black);
     position: fixed;
     top: 0;
     left: 0;
@@ -67,13 +84,15 @@ li is where youll set the postioning of the links*/
     transform: translateY(100%);
 }
 .intro-text{
-    color: blanchedalmond;
-    font-size: 2rem;
-    line-height: 2;
+    color: var(--main-black);
+    font-size: 1.5rem;
+    line-height: 1.5;
+    font-family: var(--title-font);
+    font-weight: lighter;
 }
 
 .hide{
-    background: black;
+    background:var(--main-color);
     overflow: hidden;
 }
 .hide span{
@@ -81,5 +100,39 @@ li is where youll set the postioning of the links*/
     display: inline-block;
 }
 /*animation ends*/
+.title{
+    font-size: 2rem;
+    font-family: var(--title-font);
+    color: var(--thrid-color);
+    margin-block-end:1.2rem;
+}
+.about-text{
+    font-family: var(--bodytext-font);
+    font-size: 2rem;
+}
 
 
+
+#projects{
+    background-color: var(--main-white);
+    padding-inline: 1rem;
+}
+.block{
+    width: 2rem;
+    border-top:5px solid var(--accent-color);
+    width: 2rem;
+}
+
+.project-img{
+    width: 100%;
+    margin-block: 2rem;
+}
+.project-name{
+    font-size: 1.5rem;
+    font-family: var(--title-font);
+}
+
+.project-text{
+    font-family: var(--bodytext-font);
+    font-size: 1.2rem;
+}
