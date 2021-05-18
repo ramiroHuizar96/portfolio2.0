@@ -116,6 +116,7 @@ li is where youll set the postioning of the links*/
 #projects{
     background-color: var(--main-white);
     padding-inline: 1rem;
+    padding-block-end: 3rem;
 }
 .block{
     width: 2rem;
@@ -135,4 +136,49 @@ li is where youll set the postioning of the links*/
 .project-text{
     font-family: var(--bodytext-font);
     font-size: 1.2rem;
+}
+.projectlinks{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.project-button{
+    margin-inline-end: 2rem;
+    list-style: none;
+    font-size: 1.5rem;
+    font-family: var(--bodytext-font);
+    font-weight: bolder;
+    letter-spacing: 2px;
+    color: var(--secondary-color);
+}
+
+.contact{
+    height: 40vh;
+    color: var(--main-white);
+    background:var(--thrid-color);
+}
+.contact h3{
+    font-size: 1.5rem;
+    font-family: var(--title-font);
+    padding-top: 2rem;
+    text-align: center;
+}
+.contact-links{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    list-style: none;
+    position: relative;
+    top: 3rem;
+    font-size: 2.5rem;
+    font-family: var(--bodytext-font); 
+}
+#email{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    position: relative;
+    top: 50%;
+    font-size: 1.5rem;
 }
