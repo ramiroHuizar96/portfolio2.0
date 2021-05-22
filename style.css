@@ -15,10 +15,15 @@
     padding: 0;
     box-sizing: border-box;
 }
+body{
+    overflow-x: hidden;
+}
 .landing, #about{
     min-height: 100vh;
     background-color: var(--main-white);
-    padding-inline: 1rem;
+}
+#about, nav{
+    padding-inline: 10rem;
 }
 /*landing is the home page */
 nav{
@@ -31,19 +36,26 @@ nav{
 .navlinks{
     display: flex;
     list-style: none;
+    justify-content: space-around;
 }
-.navlinks li{
-    padding-inline-start: 1rem;
-    font-size: 1rem;
-    color: var(--secondary-color);
+.navlinks li a{
+    padding-inline-end: 6rem;
+    font-size: 2.5rem;
+    color: var(--main-white);
     font-family: var(--bodytext-font);
     font-weight: bold;
+    text-decoration: none;
+
 }
 /*nav is to set the location and height
 .navlinks is to edit the text
 li is where youll set the postioning of the links*/
 #logo{
-    font-size: 1.5rem;
+    margin-inline-start: 3rem;
+    font-size: 5rem;
+    color: var(--thrid-color);
+    font-family: var(--animation-font);
+    font-weight: lighter;
 }
 /* greeting animated text starts*/
 .big-text{
@@ -51,9 +63,9 @@ li is where youll set the postioning of the links*/
     top: 40%;
     left: 50%;
     transform: translate(-50%, -40%);
-    font-size: 3rem;
+    font-size: 9rem;
     color: var(--main-black);
-    font-family: var(--animation-font);
+    font-family: var(--title-font);
     font-weight: lighter;
 }
 /* greeting animated text ends*/
@@ -85,7 +97,7 @@ li is where youll set the postioning of the links*/
 }
 .intro-text{
     color: var(--main-black);
-    font-size: 1.5rem;
+    font-size: 2.5rem;
     line-height: 1.5;
     font-family: var(--title-font);
     font-weight: lighter;
@@ -101,56 +113,67 @@ li is where youll set the postioning of the links*/
 }
 /*animation ends*/
 .title{
-    font-size: 2rem;
+    font-size: 6rem;
     font-family: var(--title-font);
     color: var(--thrid-color);
-    margin-block-end:1.2rem;
+    margin-block-end:7rem;
 }
 .about-text{
     font-family: var(--bodytext-font);
-    font-size: 2rem;
+    font-size: 5rem;
 }
 
 
 
 #projects{
     background-color: var(--main-white);
-    padding-inline: 1rem;
+    padding-inline: 10rem;
     padding-block-end: 3rem;
 }
 .block{
-    width: 2rem;
-    border-top:5px solid var(--accent-color);
-    width: 2rem;
+    width: 12rem;
+    border-top:10px solid var(--accent-color);
+    margin-block-start: 4rem;
 }
 
 .project-img{
     width: 100%;
     margin-block: 2rem;
+    grid-area: img;
 }
 .project-name{
-    font-size: 1.5rem;
+    font-size: 4rem;
     font-family: var(--title-font);
+    grid-area: name;
 }
-
 .project-text{
     font-family: var(--bodytext-font);
-    font-size: 1.2rem;
+    font-size: 4rem;
+    grid-area: text;
 }
 .projectlinks{
     display: flex;
     align-items: center;
     justify-content: space-evenly;
+    grid-area: links;
 }
 
 .project-button{
     margin-inline-end: 2rem;
     list-style: none;
-    font-size: 1.5rem;
+    font-size: 4rem;
     font-family: var(--bodytext-font);
     font-weight: bolder;
     letter-spacing: 2px;
     color: var(--secondary-color);
+}
+.project-wrapper{
+    display: grid;
+    grid-gap: 3rem;
+    grid-template-areas: 
+    'name name name name'
+    'img img img text'
+    'img img img links'
 }
 
 .contact{
@@ -159,7 +182,7 @@ li is where youll set the postioning of the links*/
     background:var(--thrid-color);
 }
 .contact h3{
-    font-size: 1.5rem;
+    font-size: 4rem;
     font-family: var(--title-font);
     padding-top: 2rem;
     text-align: center;
@@ -171,7 +194,7 @@ li is where youll set the postioning of the links*/
     list-style: none;
     position: relative;
     top: 3rem;
-    font-size: 2.5rem;
+    font-size: 7rem;
     font-family: var(--bodytext-font); 
 }
 #email{
@@ -179,6 +202,128 @@ li is where youll set the postioning of the links*/
     align-items: center;
     justify-content: space-evenly;
     position: relative;
-    top: 50%;
-    font-size: 1.5rem;
+    top: 5rem;
+    font-size: 3rem;
+}
+.burger div{
+    width: 25px;
+    height: 5px;
+    margin: 5px;
+    background: var(--main-white);
+    transition: all 0.3s ease;
+}
+nav{
+    background-color: var(--main-color);
+    margin: 0;
+    background-size: cover;
+}
+.burger{
+    display: none;
+}
+/*Modile nav settings START*/
+    
+@media screen and (max-width: 768px) {
+    *{
+        overflow-x: hidden;
+    }
+    .intro-text{
+        font-size: 1.5rem;
+    }
+    .navlinks{
+        position: absolute;
+        right: 0px;
+        height: 92vh;
+        top: 8vh;
+        background-color: var(--main-color);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        width: 50%;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+        z-index: 1;
+    }
+    .navlinks li{
+        opacity: 0;
+    }
+    .navlinks li a{
+        font-size: 2rem;
+    }
+    .burger{
+        display: block;
+        cursor: pointer;
+    }
+    .big-text{
+        font-size: 2rem;
+    }
+    #about, nav, #projects{
+        padding-inline: 1rem;
+    }
+    #logo{
+        font-size: 2rem;
+    }
+    .project-text, .about-text{
+        font-size: 2rem;
+    }
+    .project-img{
+        width: 100%;
+        margin-block: 2rem;
+    }
+    .title{
+        font-size: 2.5rem;
+    }
+    .project-name{
+        font-size: 2rem;
+    }
+    .contact h3{
+        font-size: 2rem;
+    }
+    .contact-links{
+        font-size: 3rem;
+    }
+    .project-button{
+        font-size: 2rem;
+    }
+    #email{
+        font-size: 1.5rem;
+    }
+    .projectlinks{
+        display: flex;
+        overflow: hidden;
+        width: 100%;
+        padding-inline: 1rem;
+    }
+    .project-wrapper{
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+/*Modile nav settings end*/
+
+.nav-active{
+    transform: translateX(0%);
+}
+/*Nav link aniumations start */
+@keyframes navLinkFade{
+    from{
+        opacity: 0;
+        transition: translateX(50px);
+    }
+    to{
+        opacity: 1;
+        transition: translateX(0px);
+    }
+}
+/*Nav link End */
+/* responsive nav bar animation Start*/
+.toggle .line1{
+    transform: rotate(-50deg) translate(-6px, 8px);
+}
+.toggle .line2{
+    opacity: 0;
+}
+.toggle .line3{
+    transform: rotate(50deg) translate(-6px, -9px);
 }
