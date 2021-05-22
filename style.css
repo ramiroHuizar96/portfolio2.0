@@ -63,7 +63,7 @@ li is where youll set the postioning of the links*/
     top: 40%;
     left: 50%;
     transform: translate(-50%, -40%);
-    font-size: 9rem;
+    font-size: 6rem;
     color: var(--main-black);
     font-family: var(--title-font);
     font-weight: lighter;
@@ -113,14 +113,14 @@ li is where youll set the postioning of the links*/
 }
 /*animation ends*/
 .title{
-    font-size: 6rem;
+    font-size: 4rem;
     font-family: var(--title-font);
     color: var(--thrid-color);
     margin-block-end:7rem;
 }
 .about-text{
     font-family: var(--bodytext-font);
-    font-size: 5rem;
+    font-size: 3rem;
 }
 
 
@@ -142,13 +142,13 @@ li is where youll set the postioning of the links*/
     grid-area: img;
 }
 .project-name{
-    font-size: 4rem;
+    font-size: 3.5rem;
     font-family: var(--title-font);
     grid-area: name;
 }
 .project-text{
     font-family: var(--bodytext-font);
-    font-size: 4rem;
+    font-size: 2.5rem;
     grid-area: text;
 }
 .projectlinks{
@@ -161,7 +161,7 @@ li is where youll set the postioning of the links*/
 .project-button{
     margin-inline-end: 2rem;
     list-style: none;
-    font-size: 4rem;
+    font-size: 2rem;
     font-family: var(--bodytext-font);
     font-weight: bolder;
     letter-spacing: 2px;
@@ -182,7 +182,7 @@ li is where youll set the postioning of the links*/
     background:var(--thrid-color);
 }
 .contact h3{
-    font-size: 4rem;
+    font-size: 3rem;
     font-family: var(--title-font);
     padding-top: 2rem;
     text-align: center;
@@ -194,7 +194,7 @@ li is where youll set the postioning of the links*/
     list-style: none;
     position: relative;
     top: 3rem;
-    font-size: 7rem;
+    font-size: 4rem;
     font-family: var(--bodytext-font); 
 }
 #email{
@@ -204,6 +204,7 @@ li is where youll set the postioning of the links*/
     position: relative;
     top: 5rem;
     font-size: 3rem;
+    font-family: var(--bodytext-font);
 }
 .burger div{
     width: 25px;
