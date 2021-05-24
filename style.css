@@ -39,8 +39,8 @@ nav{
     justify-content: space-around;
 }
 .navlinks li a{
-    padding-inline-end: 6rem;
-    font-size: 2.5rem;
+    padding-inline-end: 2.5rem;
+    font-size: 2rem;
     color: var(--main-white);
     font-family: var(--bodytext-font);
     font-weight: bold;
@@ -63,7 +63,7 @@ li is where youll set the postioning of the links*/
     top: 40%;
     left: 50%;
     transform: translate(-50%, -40%);
-    font-size: 6rem;
+    font-size: 4.5rem;
     color: var(--main-black);
     font-family: var(--title-font);
     font-weight: lighter;
@@ -123,8 +123,6 @@ li is where youll set the postioning of the links*/
     font-size: 3rem;
 }
 
-
-
 #projects{
     background-color: var(--main-white);
     padding-inline: 10rem;
@@ -157,15 +155,18 @@ li is where youll set the postioning of the links*/
     justify-content: space-evenly;
     grid-area: links;
 }
-
 .project-button{
-    margin-inline-end: 2rem;
     list-style: none;
+}
+
+.project-button a{
+    margin-inline-end: 2rem;
     font-size: 2rem;
     font-family: var(--bodytext-font);
     font-weight: bolder;
     letter-spacing: 2px;
     color: var(--secondary-color);
+    text-decoration: none;
 }
 .project-wrapper{
     display: grid;
@@ -180,32 +181,50 @@ li is where youll set the postioning of the links*/
     height: 40vh;
     color: var(--main-white);
     background:var(--thrid-color);
+    background-size: cover;
+    position: relative;
 }
 .contact h3{
     font-size: 3rem;
-    font-family: var(--title-font);
+    font-family: var(--bodytext-font);
     padding-top: 2rem;
     text-align: center;
+    padding-inline: 1rem;
 }
 .contact-links{
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: center;
     list-style: none;
     position: relative;
     top: 3rem;
     font-size: 4rem;
     font-family: var(--bodytext-font); 
+    margin-block-end: 5rem;
 }
-#email{
+.contact-links li a{
+    color: var(--main-white);
+    margin-inline: 1rem;
+}
+.email-button{
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
-    position: relative;
-    top: 5rem;
-    font-size: 3rem;
-    font-family: var(--bodytext-font);
+    justify-content: center;
+    font-size: 2.5rem;
+    padding-block-end: 1rem;
+    margin-top: 2rem;
 }
+.email-button a{
+    text-decoration: none;
+    color: var(--main-white);
+    font-family: var(--title-font);
+}
+span{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .burger div{
     width: 25px;
     height: 5px;
@@ -228,7 +247,8 @@ nav{
         overflow-x: hidden;
     }
     .intro-text{
-        font-size: 1.5rem;
+        font-size: 1rem;
+        padding-inline: 1rem;
     }
     .navlinks{
         position: absolute;
@@ -273,6 +293,7 @@ nav{
     }
     .title{
         font-size: 2.5rem;
+        margin-block-end: 2.5rem;
     }
     .project-name{
         font-size: 2rem;
@@ -299,8 +320,28 @@ nav{
         display: flex;
         flex-direction: column;
     }
+    .contact-links{
+        font-size: 2.5rem;
+    }
+    .contact h3{
+        font-size: 1.5rem;
+    }
+    .email-button{
+        font-size: 1.5rem;
+    }
 }
 
+@media screen and (max-width: 400px){
+    #logo{
+        margin-inline-start: 1rem;
+    }
+    .project-text{
+        font-size: 1.7rem;
+    }
+    .about-text{
+        font-size: 1.8rem;
+    }
+}
 /*Modile nav settings end*/
 
 .nav-active{

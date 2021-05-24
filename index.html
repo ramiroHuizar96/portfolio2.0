@@ -18,9 +18,9 @@
         <nav>
             <h1 id="logo">RH</h1>
                 <ul class="navlinks">
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Projects</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
                 <div class="burger">
                     <div class="line1"></div>
@@ -28,7 +28,7 @@
                     <div class="line3"></div>
                 </div>
         </nav>
-            <h2 class="big-text">Hello, I'm Ramiro. Web Developer</h2>
+            <h2 class="big-text">Hello, I'm Ramiro Huizar. A Front-end web developer based in Chicago, Illinois.</h2>
     </section>
     <section class="intro">
         <div class="intro-text">
@@ -47,41 +47,45 @@
 </header> 
 
 <main>
-    <section id="about" class="main-wrapper">
-        <h2 class="title">About</h2>
-        <p class="about-text">Lorem ipsum dolor sit, amet conse
-        ctetur adipisicing elit. Qui modi nihil perferen
-        dis tempore, rempariatur odit inventore dolorum 
-        iure quos ratione est hic nulla soluta a
-        liquid atque sunt debitis! Impedit?</p>
-            <div class="block"></div>
-
-    </section>
     <section id="projects" class="main-wrapper">
         <h2 class="title">Projects</h2>
             <div class="project-wrapper">
                 <h3 class="project-name">Weather App</h3>
-                <p class="project-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Esse dolor eius aliquid, atque id libero ipsa odio laudantium ab repudiandae dignissimos, ipsam fuga architecto! Velit quidem error est quia consequuntur.</p>
+                <p class="project-text">Using Open Weather Map's API, HTML, CSS, and JavaScript, this is a real-time 
+                    weather app that uses the geo-location of your device. The app is capable of generating a small summary with a 
+                    high, low, and "feels like" temperature along with a humidity percentage. Mobile first approach 
+                    with the desktop-responsive portion in construction.</p>
                 <img class="project-img" src="./img/weatherappscreenshot.png"> 
                     <ul class="projectlinks">
-                        <li class="project-button">Code</li>
-                        <li class="project-button">Visit</li>
+                        <li class="project-button"><a href="https://github.com/ramiroHuizar96/weatherapp1" target="_blank">Code</a></li>
+                        <li class="project-button"><a href="https://ramirohuizar96.github.io/weatherapp1/" target="_blank">Visit</a></li>
                     </ul>
             </div>
+    </section>
+    <section id="about" class="main-wrapper">
+        <h2 class="title">About Me</h2>
+        <p class="about-text">I'm an aspiring front-end web developer and designer. I currently spend my free-time learning the ins and outs of becoming a developer. 
+        Throughout my journey with coding I have learned HTML, CSS, JavaScript, SASS and Git/GitHub.
+        
+        When I'm not coding I work full-time as a Quality Assurance lead to support my family.
+        Aside from coding I also have a passion for drawing/painting. 
+        </p>
+            <div class="block"></div>
     </section>
 
 
 </main>
 <footer>
-    <section class="contact">
-        <h3>Contact Information</h3>
+    <section class="contact" id="contact">
+        <h3 class=>For any questions or comment please contact me below</h3>
         <ul class="contact-links">
-            <li><i class="fab fa-linkedin"></i></li>
-            <li><i class="fab fa-instagram-square"></i></li>
-            <li><i class="fab fa-github-square"></i></li>
-            <li>Resume</li>
+            <li><a href="https://www.linkedin.com/public-profile/settings?trk=d_flagship3_profile_self_view_public_profile" target="blank" ><i class="fab fa-linkedin"></i></a></li>
+            <li><a href="https://www.instagram.com/r_coding_huizar/" target="blank" ><i class="fab fa-instagram-square"></i></a></li>
+            <li><a href="https://github.com/ramiroHuizar96/vintagewebsite" target="blank" ><i class="fab fa-github-square"></i></a></li>
+            <li><a id="resume-link" href="./resume 2021.pdf" target="_blank"><i class="fas fa-file"></i></a></li>
         </ul>
-        <p id="email">huizarramiro2@gmail.com</p>
+        <h1 class="email-button"><a href="mailto:huizarramiro2@gmail.com">Email me</a></h1>
+        <span>Ramiro Huizar | 2021</span>
     </section>
 
 </footer>
