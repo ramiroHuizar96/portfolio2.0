@@ -10,6 +10,7 @@
     --title-font:  'Playfair Display SC', serif;
 }
 
+
 *{
     margin: 0;
     padding: 0;
@@ -45,7 +46,9 @@ nav{
     font-family: var(--bodytext-font);
     font-weight: bold;
     text-decoration: none;
-
+}
+.navlinks li a:hover{
+    color: var(--thrid-color);
 }
 /*nav is to set the location and height
 .navlinks is to edit the text
@@ -168,6 +171,9 @@ li is where youll set the postioning of the links*/
     color: var(--secondary-color);
     text-decoration: none;
 }
+.project-button a:hover{
+    color: var(--accent-color);
+}
 .project-wrapper{
     display: grid;
     grid-gap: 3rem;
@@ -206,6 +212,10 @@ li is where youll set the postioning of the links*/
     color: var(--main-white);
     margin-inline: 1rem;
 }
+.contact-links li a:hover{
+    color: var(--main-color);
+
+}
 .email-button{
     display: flex;
     align-items: center;
@@ -218,6 +228,9 @@ li is where youll set the postioning of the links*/
     text-decoration: none;
     color: var(--main-white);
     font-family: var(--title-font);
+}
+.email-button a:hover{
+    color: var(--secondary-color);
 }
 span{
     display: flex;
